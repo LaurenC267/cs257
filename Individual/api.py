@@ -46,7 +46,10 @@ def get_total_stat(pokemon_name):
     return jsonify({
                     'pokemon': pokemon_name,
                     'total_stat': stat})
-
+    
+@app.route('/help')
+def get_help():
+    return flask.render_template('help.html')
     
 
 if __name__ == '__main__':
